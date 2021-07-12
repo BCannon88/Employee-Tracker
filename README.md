@@ -8,7 +8,7 @@
 
   ## Description
 
-  # An application that allows you to view, add and update information in the company database using inquirer and MySQL
+   An application that allows you to view, add and update information in the company database using inquirer and MySQL
 
   ## Table of Contents        
    * [Installation](#Installation)
