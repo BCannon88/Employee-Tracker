@@ -2,11 +2,11 @@
 
   <img src="https://img.shields.io/badge/mybadge--blue" alt="badge with license name"/>
 
-  ![Employee Tracker](https://drive.google.com/file/d/1qfJpROtFyx0wtOqwQpuZVCgCOkN98uBH/view)
-  <iframe src="https://drive.google.com/file/d/1qfJpROtFyx0wtOqwQpuZVCgCOkN98uBH/preview" width="640" height="480"></iframe>
+  Link:https://drive.google.com/file/d/1qfJpROtFyx0wtOqwQpuZVCgCOkN98uBH/view
+  
 
 # Link
- [![Employee Tracker](https://www.youtube.com/watch?v=dY_c-IzPzNA)]
+ [![Employee Tracker](assets\Untitled_ Jul 11, 2021 7_35 PM.gif)]
 
   ## Description
 
