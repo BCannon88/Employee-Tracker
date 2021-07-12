@@ -231,24 +231,27 @@ function addRoles() {
 // Function for adding a new employee
 function addEmployees() {
     console.log("Adding a new employee...\n");
-    connection.query("SELECT * FROM role", function(err, results) {
+    connection.query("SELECT * FROM role","SELECT manager_id FROM employee", function(err, results) {
         if (err) throw err;
         let choiceArray = [];
 
         const choiceObj = {
             title: "",
-            id: ""
+            id: "",
+            manager_id: ""
         };
 
         for (let i = 0; i < results.length; i++) {
 
             choiceObj.title = results[i].title;
             choiceObj.id = results[i].id;
+            choiceObj.manager_id = results[i].manager_id;
 
             choiceObjString = JSON.stringify(choiceObj);
 
             choiceArray.push(choiceObjString);
         }
+        
         inquirer
             .prompt([{
                     type: "rawlist",
@@ -266,6 +269,12 @@ function addEmployees() {
                     message: "What is the last name of the employee that you would like to add?",
                     name: "newEmployeeLastName"
                 },
+                {
+                  type: "rawlist",
+                  message: "What is the manager id of the employee that you would like to add?",
+                  name: "newEmployeeManager",
+                  choices: choiceArray
+              },
                 
             ])
             .then(function(response) {
@@ -273,7 +282,8 @@ function addEmployees() {
                 connection.query(query, {
                         first_name: response.newEmployeeFirstName,
                         last_name: response.newEmployeeLastName,
-                        role_id: parseInt(JSON.parse(response.newEmployeeRole).id)
+                        role_id: parseInt(JSON.parse(response.newEmployeeRole).id),
+                        manager_id: parseInt(JSON.parse(response.newEmployeeManager).id)
                     },
                     function(err, res) {
                         if (err) throw err;
