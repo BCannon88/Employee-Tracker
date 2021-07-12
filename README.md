@@ -4,8 +4,6 @@
 
   Link:https://drive.google.com/file/d/1qfJpROtFyx0wtOqwQpuZVCgCOkN98uBH/view
   
-
-# Link
  [![Employee Tracker](assets\Untitled_ Jul 11, 2021 7_35 PM.gif)]
 
   ## Description
